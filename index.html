@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mrudula Y - Details</title>
+</head>
+
+<body>
+
+<h1>🔐 Login</h1>
+
+<p>Enter Access Code</p>
+
+<input type="password" id="code">
+
+<button onclick="login()">LOGIN</button>
+
+<p id="error"></p>
+
+<div id="details" style="display:none;">
+
+<h1>MRUDULA Y</h1>
+
+<h2>Personal Details</h2>
+
+<p><b>Father's Name:</b> Yogeesh HB</p>
+<p><b>Mother's Name:</b> Asha HJ</p>
+<p><b>Date of Birth:</b> 20-06-2007</p>
+<p><b>College:</b> Kalpataru First Grade Science College, Tiptur</p>
+
+<h2>Educational Details</h2>
+
+<p>📄 SSLC Mark Card</p>
+<p>📄 PUC Mark Card</p>
+
+</div>
+
+<script>
+function login() {
+
+let code = document.getElementById("code").value;
+
+if (code === "MRUDULA2007") {
+
+document.getElementById("details").style.display = "block";
+document.getElementById("error").innerHTML = "";
+
+} else {
+
+document.getElementById("error").innerHTML =
+"❌ Wrong Access Code";
+
+}
+}
+</script>
+
+</body>
+</html>
