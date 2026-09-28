@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mrudula Y - Details</title>
+<title>Mrudula Y</title>
 </head>
 
 <body>
+
+<div id="login">
 
 <h1>🔐 Login</h1>
 
@@ -16,41 +18,55 @@
 
 <p id="error"></p>
 
+</div>
+
+
 <div id="details" style="display:none;">
 
 <h1>MRUDULA Y</h1>
 
 <h2>Personal Details</h2>
 
-<p><b>Father's Name:</b> Yogeesh HB</p>
-<p><b>Mother's Name:</b> Asha HJ</p>
-<p><b>Date of Birth:</b> 20-06-2007</p>
-<p><b>College:</b> Kalpataru First Grade Science College, Tiptur</p>
+<p>Father's Name: Yogeesh HB</p>
+
+<p>Mother's Name: Asha HJ</p>
+
+<p>Date of Birth: 20-06-2007</p>
+
+<p>College: Kalpataru First Grade Science College, Tiptur</p>
 
 <h2>Educational Details</h2>
 
 <p>📄 SSLC Mark Card</p>
+
 <p>📄 PUC Mark Card</p>
 
 </div>
 
+
 <script>
+
 function login() {
 
 let code = document.getElementById("code").value;
 
-if (code === "MRUDULA2007") {
+if (code == "MRUDULA2007") {
+
+document.getElementById("login").style.display = "none";
 
 document.getElementById("details").style.display = "block";
-document.getElementById("error").innerHTML = "";
 
-} else {
+}
+
+else {
 
 document.getElementById("error").innerHTML =
-"❌ Wrong Access Code";
+"Wrong Access Code";
 
 }
+
 }
+
 </script>
 
 </body>
