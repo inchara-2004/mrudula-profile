@@ -1,24 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mrudula Y</title>
+
+    <title>Mrudula Y - Personal Details</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #details {
+            display: none;
+        }
+
+        #error {
+            color: red;
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            background: black;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<h1>MRUDULA Y</h1>
+<!-- LOGIN PAGE -->
 
-<h2>Personal Details</h2>
+<div class="box" id="login">
 
-<p>Father's Name: Yogeesh HB</p>
-<p>Mother's Name: Asha HJ</p>
-<p>Date of Birth: 20-06-2007</p>
-<p>College: Kalpataru First Grade Science College, Tiptur</p>
+    <h1>🔐 Login</h1>
 
-<h2>Educational Details</h2>
+    <p>Enter Access Code</p>
 
-<p>📄 SSLC Mark Card</p>
-<p>📄 PUC Mark Card</p>
+    <input
+        type="password"
+        id="code"
+        placeholder="Enter Access Code"
+    >
+
+    <button onclick="login()">
+        LOGIN
+    </button>
+
+    <p id="error"></p>
+
+</div>
+
+
+<!-- DETAILS PAGE -->
+
+<div class="box" id="details">
+
+    <h1>MRUDULA Y</h1>
+
+    <h2>Personal Details</h2>
+
+    <p>
+        <b>Father's Name:</b> Yogeesh HB
+    </p>
+
+    <p>
+        <b>Mother's Name:</b> Asha HJ
+    </p>
+
+    <p>
+        <b>Date of Birth:</b> 20-06-2007
+    </p>
+
+    <p>
+        <b>College:</b> Kalpataru First Grade Science College, Tiptur
+    </p>
+
+
+    <h2>Educational Details</h2>
+
+    <a href="sslc.jpg" target="_blank">
+        📄 SSLC Mark Card
+    </a>
+
+    <a href="puc.jpg" target="_blank">
+        📄 PUC Mark Card
+    </a>
+
+</div>
+
+
+<script>
+
+function login() {
+
+    let code = document.getElementById("code").value;
+
+    if (code === "MRUDULA2007") {
+
+        document.getElementById("login").style.display = "none";
+
+        document.getElementById("details").style.display = "block";
+
+    }
+
+    else {
+
+        document.getElementById("error").innerHTML =
+            "❌ Wrong Access Code";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
